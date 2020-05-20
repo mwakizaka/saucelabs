@@ -8,22 +8,9 @@ const wd = require('wd');
 // TODO: fill out the followings
 const testobjectApiKey = "<Your testobject api key>";
 
-
 // enables chai assertion chaining
 chaiAsPromised.transferPromiseness = wd.transferPromiseness;
 const driver = wd.promiseChainRemote('http://us1-manual.app.testobject.com/wd/hub');
-
-// optional extra logging
-driver.on('status', function(info) {
-  console.log(info.cyan);
-});
-driver.on('command', function(eventType, command, response) {
-  console.log(' > ' + eventType.cyan, command, (response || '').grey);
-});
-driver.on('http', function(meth, path, data) {
-  console.log(' > ' + meth.magenta, path, (data || '').grey);
-});
-
 
 function sleep(time) {
     return new Promise((resolve, reject) => {

@@ -16,3 +16,13 @@ Please don't forget to fill `testobjectApiKey` out
 ```
 node saucelabs.js
 ```
+
+## Example result
+```
+$ node saucelabs.js
+> 2070-10-07T19:50:18+441657:55
+```
+I expect it should be around 2020-05-20T02:55:03-07:00
+
+1. The date should be arround May 20th, 2020
+2. The date format should be ISO-8601(like `YYYY-MM-DDTHH:mm:ssZ`)
